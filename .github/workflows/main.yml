@@ -20,7 +20,7 @@ jobs:
         run: pip install -r requirements.txt
         
       - name: update gist
-        run: main.py
+        run: python main.py
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
