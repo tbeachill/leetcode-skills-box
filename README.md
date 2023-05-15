@@ -15,3 +15,6 @@
 
 ### Ignoring difficulties/skills
 If you want to exclude certain difficulties or individual skills you can do this by adding a secret called ```IGNORED_SKILLS``` and enter a list of skills/difficulties to ignore separated by commas.
+
+#### Information
+The Github action runs on a schedule, every six hours. The action is also triggered when there is a new push to the repo. This can be changed by updating the ```main.yml``` file under ```.github/workflows```
