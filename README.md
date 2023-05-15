@@ -5,7 +5,7 @@
    <p align="center">📌 Check out more pinned gists at <a href="https://github.com/matchai/awesome-pinned-gists">Awesome Pinned Gists</a></p>
 </p>
 
-## Getting started
+## Getting Started
 1. Create a new public gist with your title of choice (e.g 'Top Leetcode Skills') (https://gist.github.com/)
 2. Create a token with the gist scope and make note of the API token (https://github.com/settings/tokens/new)
 3. Fork this repo
@@ -15,7 +15,7 @@
    - ```LEETCODE_USERNAME``` your leetcode username
 5. Finally, go to your profile and add your gist to your pins by clicking ```customize your pins```
 
-## Ignoring difficulties/skills
+## Ignoring Difficulties/Skills
 If you want to exclude certain difficulties or individual skills you can do this by adding a secret called ```IGNORED_SKILLS``` and enter a list of skills/difficulties to ignore separated by commas.
 
 ## Information
