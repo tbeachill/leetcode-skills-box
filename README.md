@@ -12,9 +12,10 @@
    - ```GH_TOKEN``` the API token generated in step 2
    - ```GIST_ID``` the ID part of the gist URL (after your username)
    - ```LEETCODE_USERNAME``` your leetcode username
+5. Finally, go to your profile and add your gist to your pins by clicking ```customize your pins```
 
-### Ignoring difficulties/skills
+## Ignoring difficulties/skills
 If you want to exclude certain difficulties or individual skills you can do this by adding a secret called ```IGNORED_SKILLS``` and enter a list of skills/difficulties to ignore separated by commas.
 
-#### Information
+## Information
 The Github action runs on a schedule, every six hours. The action is also triggered when there is a new push to the repo. This can be changed by updating the ```main.yml``` file under ```.github/workflows```
