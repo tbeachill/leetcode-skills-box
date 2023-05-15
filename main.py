@@ -89,11 +89,11 @@ def get_stats() -> pd.DataFrame:
 def create_graph(df: pd.DataFrame) -> str:
     '''
     create and format an ascii graph of the top five skills, making sure the
-    total character length of each line does not exceed 43 characters.
+    total character length of each label and bar does not exceed 46 characters.
     '''
     max_str = max(df["skill"][0:5].str.len())
     max_digit = len(str(df["count"].max()))
-    bar_len = 43 - (max_str + max_digit + 4)
+    bar_len = 46 - (max_str + max_digit + 4)
 
     df["pct"] = df["count"] / df["count"].max() * bar_len
 
