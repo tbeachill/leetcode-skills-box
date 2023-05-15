@@ -1,10 +1,8 @@
 # Leetcode Stats
-<div style="text-align: center;">
-
-![Leetcode skills gist](leetcode-skills-gist.png)
-
-Automatically update a pinned gist with your top leetcode skills.
-</div>
+<p align="center">
+   <img src="leetcode-skills-gist.png">
+   <p align="center">Automatically update a pinned gist with your top leetcode skills.</p>
+</p>
 
 ## Getting started
 1. Create a new public gist with your title of choice (e.g 'Top Leetcode Skills') (https://gist.github.com/)
