@@ -1,4 +1,4 @@
-# Leetcode Stats
+# Leetcode Skills Pinned Gist
 <p align="center">
    <img src="leetcode-skills-gist.png">
    <p align="center">Automatically update a pinned gist with your top leetcode skills.</p>
@@ -14,4 +14,4 @@
    - ```LEETCODE_USERNAME``` your leetcode username
 
 ### Ignoring difficulties/skills
-If you want to exclude certain difficulties or individual stats you can do this by adding a secret called ```IGNORED_SKILLS``` and enter a list of skills/difficulties to ignore separated by commas.
+If you want to exclude certain difficulties or individual skills you can do this by adding a secret called ```IGNORED_SKILLS``` and enter a list of skills/difficulties to ignore separated by commas.
