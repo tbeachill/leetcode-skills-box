@@ -1,4 +1,4 @@
-# Leetcode Skills Pinned Gist
+# Leetcode Skills Box
 <p align="center">
    <img src="leetcode-skills-gist.png">
    <p align="center">Automatically update a pinned gist with your top leetcode skills.</p>
