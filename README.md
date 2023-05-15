@@ -1,6 +1,6 @@
 # Leetcode Skills Box
 <p align="center">
-   <img src="leetcode-skills-gist.png">
+   <img src="leetcode-skills-box.png">
    <p align="center">Automatically update a pinned gist with your top leetcode skills.</p>
 </p>
 
