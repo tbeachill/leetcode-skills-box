@@ -11,6 +11,7 @@ from github.InputFileContent import InputFileContent
 
 ENV_LEETCODE_USERNAME = "LEETCODE_USERNAME"
 ENV_IGNORED_SKILLS = "IGNORED_SKILLS"
+ENV_HIDE_DIFFICULTY = "HIDE_DIFFICULTY"
 # these variables should be set as secrets in the repository!
 ENV_GH_TOKEN = "GH_TOKEN" # token with gist scope enabled
 ENV_GIST_ID = "GIST_ID" # id part of gist url
@@ -45,9 +46,9 @@ def check_vars() -> bool:
         print(f"Could not find {env_vars_absent} in your github secrets. Check the\
               secrets in the repo settings.")
         return False
-    
+
     return True
-    
+
 def get_stats() -> pd.DataFrame:
     '''
     get stats from leetcode and organise them into a pandas dataframe.
@@ -97,6 +98,9 @@ def create_graph(df: pd.DataFrame) -> str:
 
     df["pct"] = df["count"] / df["count"].max() * bar_len
 
+    if os.environ[ENV_HIDE_DIFFICULTY].lower() in ('true', '1', 't'):
+        df["difficulty"] = ""
+
     f = "{0:<%d} ({1:>%d}) {2}{3} {4}\n" % (max_str, max_digit)
 
     graph_str = ""
@@ -104,7 +108,7 @@ def create_graph(df: pd.DataFrame) -> str:
         graph_str += f.format(df["skill"][i], df["count"][i],
                                    '█' * round(df["pct"][i]),
                                    '░' * (bar_len - round(df["pct"][i])),
-                                   df["difficulty"][i])
+                                    df["difficulty"][i])
 
     return graph_str
 
