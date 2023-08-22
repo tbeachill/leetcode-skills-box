@@ -33,10 +33,10 @@ def main() -> None:
   if check_vars():
     update_gist(create_graph(get_stats()))
 
+'''
+check that the environment variables are correctly declared.
+'''
 def check_vars() -> bool:
-    '''
-    check that the environment variables are correctly declared.
-    '''
     env_vars_absent = [
         env
         for env in REQUIRED_ENVS
@@ -49,10 +49,10 @@ def check_vars() -> bool:
 
     return True
 
+'''
+get stats from leetcode and organise them into a pandas dataframe.
+'''
 def get_stats() -> pd.DataFrame:
-    '''
-    get stats from leetcode and organise them into a pandas dataframe.
-    '''
     variables = {"username": os.environ[ENV_LEETCODE_USERNAME]}
     query = '''
     query Skills ($username: String!) {
@@ -87,11 +87,11 @@ def get_stats() -> pd.DataFrame:
 
     return skill_frame.sort_values(by=["count"], ascending=False).reset_index(drop=True)
 
+'''
+create and format an ascii graph of the top five skills, making sure the
+total character length of each label and bar does not exceed 46 characters.
+'''
 def create_graph(df: pd.DataFrame) -> str:
-    '''
-    create and format an ascii graph of the top five skills, making sure the
-    total character length of each label and bar does not exceed 46 characters.
-    '''
     max_str = max(df["skill"][0:5].str.len())
     max_digit = len(str(df["count"].max()))
     bar_len = 46 - (max_str + max_digit + 4)
@@ -112,10 +112,10 @@ def create_graph(df: pd.DataFrame) -> str:
 
     return graph_str
 
+'''
+overwrite the existing contents of the gist with the ascii graph string.
+'''
 def update_gist(graph: str) -> None:
-    '''
-    overwrite the existing contents of the gist with the ascii graph string.
-    '''
     gist = Github(os.environ[ENV_GH_TOKEN]).get_gist(os.environ[ENV_GIST_ID])
     title = list(gist.files.keys())[0]
     gist.edit(
