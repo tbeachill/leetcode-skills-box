@@ -22,4 +22,4 @@ If you want to exclude certain difficulties or individual skills you can do this
 You can do this by adding a variable (variable tab next to secrets) called `HIDE_DIFFICULTY` and setting it to `True`.
 
 ## Information
-The Github action runs on a schedule, every six hours. The action is also triggered when there is a new push to the repo. This can be changed by updating the `main.yml` file under `.github/workflows`
+The Github action runs on a schedule, at 00:00 every day. The action is also triggered when there is a new push to the repo. This can be changed by updating the `main.yml` file under `.github/workflows`
